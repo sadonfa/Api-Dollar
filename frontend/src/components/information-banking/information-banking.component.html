@@ -1,0 +1,74 @@
+<header class="header">
+  <nav class="nav">
+    <div class="container-fluid">
+        <a href="/hero"><img src="https://dollarcity.com/img/resources/logo.png" alt="Logo Dollarcity"></a>
+    </div>
+    <ul class="menu">
+      <li class="items">
+          <a href="#">Inicio</a>
+      </li>
+      <li class="items">
+          <a href="#">Contacto</a>
+      </li>
+  </ul>
+</nav>
+</header>
+
+<div class="formulario">
+<h1>Agregar</h1>
+<h3> Informacion Bancaria</h3>
+<hr class="separador">
+<form (submit)="createInformationBanking()">
+  <div class="items-form">
+    <label for="name_bank">Banco Intermediario:</label>
+    <input type="text" id="name_bank" name="name_bank" [(ngModel)]="newinformationBanking.name_bank" required>
+  </div>
+
+  <div class="items-form">
+    <label for="country_bank">Pais:</label>
+    <input type="text" id="country_bank" name="country_bank" [(ngModel)]="newinformationBanking.country_bank" required>
+  </div>
+
+  <div class="items-form">
+    <label for="address_bank">Direccion:</label>
+    <input type="text" id="address_bank" name="address_bank" [(ngModel)]="newinformationBanking.address_bank" required>
+  </div>
+
+  <div class="items-form">
+    <label for="swift_code">SWIFT:</label>
+    <input type="text" id="swift_code" name="swift_code" [(ngModel)]="newinformationBanking.swift_code" required>
+  </div>
+
+  <div class="items-form">
+    <label for="headline_account">Titular de Cuenta:</label>
+    <input type="text" id="headline_account" name="headline_account" [(ngModel)]="newinformationBanking.headline_account" required>
+  </div>
+
+  <div class="items-form">
+    <label for="type_account">Tipo de Cuenta:</label>
+    <input type="text" id="type_account" name="type_account" [(ngModel)]="newinformationBanking.type_account" required>
+  </div>
+
+  <div class="items-form">
+    <label for="num_account">Numero de Cuenta:</label>
+    <input type="text" id="num_account" name="num_account" [(ngModel)]="newinformationBanking.num_account" required>
+  </div>
+  
+  <div class="items-form">
+    <input type="hidden" id="provider_id" name="provider_id" value={{providerId}} [(ngModel)]="newinformationBanking.provider_id" required>
+  </div>
+
+  <button class="btn" type="submit">Siguiente</button>
+</form>
+</div>
+
+<footer class="footer">
+  <p>
+      DOLLARCITY TRABAJA CON NAVEGADORES QUE POSEEN NIVELES DE SEGURIDAD EXIGIDOS PARA SER UTILIZADOS EN LA CONEXIÓN
+      CON EL SITIO WEB.
+      CON EL PROPÓSITO DE GARANTIZAR QUE UTILICES LAS VERSIONES COMPATIBLES, TE SUGERIMOS QUE ACTUALICES A LA ÚLTIMA
+      DISPONIBLE.
+
+      © 2023 <a href="http://https://dollarcity.com/">DOLLARCITY</a> DERECHOS RESERVADOS
+  </p>
+</footer>

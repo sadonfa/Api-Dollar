@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Lemon Milk";
+    src: url("../fonts/LEMONMILK-Regular.otf");
+}
+
+@font-face {
+    font-family: "Lemon Milk Bold";
+    src: url("../fonts/LEMONMILK-Bold.otf");
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunito/static/Nunito-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Nunito Light";
+    src: url("../fonts/Nunito/static/Nunito-Light.ttf");
+}

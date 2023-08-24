@@ -1,0 +1,122 @@
+<header class="header">
+    <nav class="nav">
+        <div class="container-fluid">
+            <a href="/"><img src="https://dollarcity.com/img/resources/logo.png" alt="Logo Dollarcity"></a>
+        </div>
+        <ul class="menu">
+          <li class="items">
+              <a href="/">Inicio</a>
+          </li>
+          <li class="items">
+              <a href="#">Contacto</a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+<div class="formulario">
+    <h1>Datos ingresados correctamente!</h1>
+    <ul>
+      <li *ngFor="let provider of dataConfirm">
+        <p>Name Reason Social:{{ provider.name_reason_social }}</p>
+        <p>Activity: {{ provider.activity }}</p>
+        <p>Adress: {{ provider.address }}</p>
+        <p>Department: {{ provider.departament }}</p>
+        <p>Services Products Offered: {{ provider.services_products_offered }}</p>
+        <p>Mail Warning Pay: {{ provider.mail_warning_pay }}</p>
+        <p>provider.mail_representative {{ provider.mail_representative }}</p>
+        <p>provider.adress_office {{ provider.adress_office }}</p>
+        <p>provider.document_identity  {{ provider.document_identity }}</p>
+        <p>provider.city  {{ provider.city}}</p>
+        <p>provider.phone_company {{ provider.phone_company }}</p>
+        <p>provider.country {{ provider.country }}</p>
+        <p>provider.cellphone {{ provider.cellphone  }}</p>
+        <p>provider.position_job {{ provider.position_job }}</p>
+        <p>provider.provider_id {{ provider.provider_id}}</p>
+        <div *ngIf="provider.nit_ElSalvador != null">
+            <p>Provider City {{ provider.nit_ElSalvador }}</p>
+        <p>provider.iva_ElSalvador {{ provider.iva_ElSalvador }}</p>
+        <p>provider.taxpayer_ElSalvador {{ provider.taxpayer_ElSalvador }}</p>
+        <p>provider.activity_ElSalvador {{ provider.activity_ElSalvador }}</p>
+        </div>
+        <div *ngIf="provider.rtu_guatemala != null">
+            <p>provider.rtu_guatemala {{ provider.rtu_guatemala }}</p>
+            <p>provider.cui_guatemala {{ provider.cui_guatemala }}</p>
+            <p>provider.regime_guatemala {{ provider.regime_guatemala }}</p>
+            <p>provider.retention_guatemala {{ provider.retention_guatemala }}</p>
+            <p>provider.data_retention_guatemala {{ provider.data_retention_guatemala}}</p>
+            <p>provider.tax_guatemala {{ provider.tax_guatemala}}</p>
+        </div>
+        <div *ngIf="provider.num_tax_panama != null">
+            <p>provider.num_tax_panama {{ provider.num_tax_panama }}</p>
+        </div>
+        <div *ngIf="provider.rtu_guatemala != null">
+            <p>provider.rtu_guatemala {{ provider.rtu_guatemala }}</p>
+            <p>provider.cui_guatemala {{ provider.cui_guatemala }}</p>
+            <p>provider.regime_guatemala {{ provider.regime_guatemala }}</p>
+            <p>provider.retention_guatemala {{ provider.retention_guatemala }}</p>
+            <p>provider.data_retention_guatemala {{ provider.data_retention_guatemala}}</p>
+            <p>provider.tax_guatemala {{ provider.tax_guatemala}}</p>
+        </div>
+
+        <div *ngIf="provider.ruc_dni_peru != null">
+            <p>provider.ruc_dni_peru {{ provider.ruc_dni_peru }}</p>
+            <p>provider.retention_peru{{ provider.retention_peru }}</p>
+            <p>provider.subject_spot_peru {{ provider.subject_spot_peru }}</p>
+            <p>provider.agent_perception_peru {{ provider.agent_perception_peru }}</p>
+            <p>provider.data_retention_guatemala {{ provider.data_retention_guatemala}}</p>
+            <p>provider.tax_guatemala {{ provider.tax_guatemala}}</p>
+        </div>
+        <div *ngIf="provider.taxpayer_colombia != null">
+            <p>provider.taxpayer_colombia {{ provider.taxpayer_colombia}}</p>
+            <p>provider.autoretenedor_colombia{{ provider.autoretenedor_colombia }}</p>
+            <p>provider.retefuente_colombia {{ provider.retefuente_colombia }}</p>
+            <p>provider.rut_colombia {{ provider.rut_colombia }}</p>
+            <p>provider.ciiu_colombia {{ provider.ciiu_colombia}}</p>
+        </div>
+
+            <p>provider.name_bank {{ provider.name_bank}}</p>
+            <p>provider.country_bank {{ provider.country_bank }}</p>
+            <p>provider.address_bank {{ provider.address_bank }}</p>
+            <p>provider.swift_code {{ provider.swift_code }}</p>
+            <p>provider.headline_account {{ provider.headline_account}}</p>
+            <p>provider.type_account {{ provider.type_account}}</p>
+            <p>provider.num_account {{ provider.num_account}}</p>
+            <p>provider.certification_banking {{ provider.certification_banking}}</p>
+            <p>provider.commitment_suppliers {{ provider.commitment_suppliers}}</p>
+            <p>provider.documentation_extra {{ provider.documentation_extra}}</p>
+            <p>provider.contact_commercial {{ provider.contact_commercial}}</p>
+            <p>provider.mail_commercial {{ provider.mail_commercial}}</p>
+            <p>provider.positition_commercial {{ provider.positition_commercial}}</p>
+            <p>provider.cellphone_commercial {{ provider.cellphone_commercial}}</p>
+            <p>provider.mail_commercial {{ provider.contact_finance}}</p>
+            <p>provider.mail_finance{{ provider.mail_finance}}</p>
+            <p>provider.positition_finance {{ provider.positition_finance}}</p>
+            <p>provider.cellphone_finance {{ provider.cellphone_finance}}</p>
+            <p>provider.member_pep {{ provider.member_pep}}</p>
+            <p>provider.origin_funds {{ provider.origin_funds}}</p>
+            <p>provider.name_acquaintance {{ provider.name_acquaintance}}</p>
+            <p>provider.positition_acquaintance {{ provider.positition_acquaintance}}</p>
+            <p>provider.relation_acquaintance {{ provider.relation_acquaintance}}</p>
+            <p>provider.name {{ provider.name}}</p>
+            <p>provider.identification {{ provider.identification}}</p>
+            <p>provider.positition {{ provider.positition}}</p>
+            <p>provider.name_beneficiary {{ provider.name_beneficiary}}</p>
+            <p>provider.identification_beneficiary {{ provider.identification_beneficiary}}</p>
+            <p>provider.percentage_participation {{ provider.percentage_participation}}</p>
+
+        <!-- Agrega más campos según tus necesidades -->
+      </li>
+    </ul>
+  </div>
+
+  <footer class="footer">
+    <p>
+        DOLLARCITY TRABAJA CON NAVEGADORES QUE POSEEN NIVELES DE SEGURIDAD EXIGIDOS PARA SER UTILIZADOS EN LA CONEXIÓN
+        CON EL SITIO WEB.
+        CON EL PROPÓSITO DE GARANTIZAR QUE UTILICES LAS VERSIONES COMPATIBLES, TE SUGERIMOS QUE ACTUALICES A LA ÚLTIMA
+        DISPONIBLE.
+  
+        © 2023 <a href="http://https://dollarcity.com/">DOLLARCITY</a> DERECHOS RESERVADOS
+    </p>
+  </footer>
+

@@ -1,0 +1,77 @@
+<header class="header">
+  <nav class="nav">
+    <div class="container-fluid">
+        <a href="/hero"><img src="https://dollarcity.com/img/resources/logo.png" alt="Logo Dollarcity"></a>
+    </div>
+    <ul class="menu">
+      <li class="items">
+          <a href="#">Inicio</a>
+      </li>
+      <li class="items">
+          <a href="/contacts">Contacto</a>
+      </li>
+  </ul>
+</nav>
+</header>
+<div class="formulario">
+<h1>Agregar Contacto</h1>
+<hr class="separador">
+<form (submit)="crearContacto()">
+  <div class="items-form">
+    <label for="contact_commercial">Contacto Comercial:</label>
+    <input type="text" id="contact_commercial" name="contact_commercial" [(ngModel)]="nuevoContacto.contact_commercial" required>
+  </div>
+
+  <div class="items-form" >
+    <label for="mail_commercial">Correo Comercial:</label>
+    <input type="mail" id="mail_commercial" name="mail_commercial" [(ngModel)]="nuevoContacto.mail_commercial" required>
+  </div>
+
+  <div class="items-form">
+    <label for="positition_commercial">Cargoo Comercial:</label>
+    <input type="text" id="positition_commercial" name="positition_commercial" [(ngModel)]="nuevoContacto.positition_commercial" required>
+  </div>
+
+  <div class="items-form">
+    <label for="cellphone_commercial">Telefono Comercial:</label>
+    <input type="text" id="cellphone_commercial" name="cellphone_commercial" [(ngModel)]="nuevoContacto.cellphone_commercial" required>
+  </div>
+
+  <div class="items-form">
+    <label for="contact_finance">Contacto Finanzas:</label>
+    <input type="text" id="contact_finance" name="contact_finance" [(ngModel)]="nuevoContacto.contact_finance" required>
+  </div>
+
+  <div class="items-form">
+    <label for="mail_finance">Correo Finanzas:</label>
+    <input type="mail" id="mail_finance" name="mail_finance" [(ngModel)]="nuevoContacto.mail_finance" required>
+  </div>
+
+  <div class="items-form">
+    <label for="positition_finance">Cargo Finanzas:</label>
+    <input type="text" id="positition_finance" name="positition_finance" [(ngModel)]="nuevoContacto.positition_finance" required>
+  </div>
+
+  <div class="items-form">
+    <label for="cellphone_finance">Telefono Finanzas:</label>
+    <input type="text" id="cellphone_finance" name="cellphone_finance" [(ngModel)]="nuevoContacto.cellphone_finance" required>
+  </div>
+  
+  <div class="items-form">
+    <input type="hidden" id="provider_id" name="provider_id" value={{providerId}} [(ngModel)]="nuevoContacto.provider_id" required>
+  </div>
+
+  <button class="btn" type="submit">Siguiente</button>
+</form>
+</div>
+
+<footer class="footer">
+  <p>
+      DOLLARCITY TRABAJA CON NAVEGADORES QUE POSEEN NIVELES DE SEGURIDAD EXIGIDOS PARA SER UTILIZADOS EN LA CONEXIÓN
+      CON EL SITIO WEB.
+      CON EL PROPÓSITO DE GARANTIZAR QUE UTILICES LAS VERSIONES COMPATIBLES, TE SUGERIMOS QUE ACTUALICES A LA ÚLTIMA
+      DISPONIBLE.
+
+      © 2023 <a href="http://https://dollarcity.com/">DOLLARCITY</a> DERECHOS RESERVADOS
+  </p>
+</footer>

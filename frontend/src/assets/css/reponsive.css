@@ -1,0 +1,15 @@
+@media screen and (max-width: 825px) {
+
+.header {
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width: 450px) {
+
+   .nav{
+    flex-direction: column;
+   }
+    
+    }

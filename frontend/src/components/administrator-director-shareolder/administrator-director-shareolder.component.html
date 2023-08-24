@@ -1,0 +1,72 @@
+<header class="header">
+  <nav class="nav">
+    <div class="container-fluid">
+        <a href="/hero"><img src="https://dollarcity.com/img/resources/logo.png" alt="Logo Dollarcity"></a>
+    </div>
+    <ul class="menu">
+      <li class="items">
+          <a href="#">Inicio</a>
+      </li>
+      <li class="items">
+          <a href="#">Contacto</a>
+      </li>
+  </ul>
+</nav>
+</header>
+<div class="formulario">
+  <h1>Agregar</h1>
+  <h3>Administradores, Directores y Accionistas</h3>
+  <hr class="separador">
+  <form (submit)="crearAdministratorDirectorShareolder()">
+  
+  <p>Miembros de la Junta Directiva</p>
+  
+    <div class="items-form">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="nuevoAdministrator.name" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="identification">Identificacion:</label>
+      <input type="text" id="identification" name="identification" [(ngModel)]="nuevoAdministrator.identification" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="positition">Cargo:</label>
+      <input type="text" id="positition" name="address_office" [(ngModel)]="nuevoAdministrator.positition" required>
+    </div>
+  
+  <p>Beneficiarios Finales con participación igual o superior al 5%</p>
+    
+    <div class="items-form">
+      <label for="name_beneficiary">Nombre:</label>
+      <input type="text" id="name_beneficiary" name="name_beneficiary" [(ngModel)]="nuevoAdministrator.name_beneficiary" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="identification_beneficiary">Identificacion:</label>
+      <input type="text" id="identification_beneficiary" name="identification_beneficiary" [(ngModel)]="nuevoAdministrator.identification_beneficiary" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="percentage_participation">Porcentaje de Participacion:</label>
+      <input type="text" id="percentage_participation" name="percentage_participation" [(ngModel)]="nuevoAdministrator.percentage_participation" required>
+    </div>
+  
+    <div class="items-form">
+      <input type="hidden" id="provider_id" name="provider_id" value={{providerId}} [(ngModel)]="nuevoAdministrator.provider_id" required>
+    </div>
+    <button class="btn" type="submit">Siguiente</button>
+  </form>
+</div>
+
+<footer class="footer">
+  <p>
+      DOLLARCITY TRABAJA CON NAVEGADORES QUE POSEEN NIVELES DE SEGURIDAD EXIGIDOS PARA SER UTILIZADOS EN LA CONEXIÓN
+      CON EL SITIO WEB.
+      CON EL PROPÓSITO DE GARANTIZAR QUE UTILICES LAS VERSIONES COMPATIBLES, TE SUGERIMOS QUE ACTUALICES A LA ÚLTIMA
+      DISPONIBLE.
+
+      © 2023 <a href="http://https://dollarcity.com/">DOLLARCITY</a> DERECHOS RESERVADOS
+  </p>
+</footer>

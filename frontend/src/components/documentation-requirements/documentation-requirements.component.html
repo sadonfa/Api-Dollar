@@ -1,0 +1,53 @@
+<header class="header">
+  <nav class="nav">
+    <div class="container-fluid">
+        <a href="/hero"><img src="https://dollarcity.com/img/resources/logo.png" alt="Logo Dollarcity"></a>
+    </div>
+    <ul class="menu">
+      <li class="items">
+          <a href="#">Inicio</a>
+      </li>
+      <li class="items">
+          <a href="#">Contacto</a>
+      </li>
+  </ul>
+</nav>
+</header>
+<div class="formulario">
+<h1>Agregar </h1>
+<h3>Documentacion Requerida</h3>
+<hr class="separador">
+<form (submit)="crearDocumentoRequerido()">
+  <div class="items-form">
+    <label for="certification_banking">Certificación Bancaria:</label>
+    <input type="text" id="certification_banking" name="certification_banking" [(ngModel)]="nuevoDocumentoRequerido.certification_banking" required>
+  </div>
+
+  <div class="items-form">
+    <label for="commitment_suppliers">Compromiso Proveedores:</label>
+    <input type="text" id="commitment_suppliers" name="commitment_suppliers" [(ngModel)]="nuevoDocumentoRequerido.commitment_suppliers" required>
+  </div>
+
+  <div class="items-form">
+    <label for="documentation_extra">Documentacion Extra:</label>
+    <input type="text" id="documentation_extra" name="documentation_extra" [(ngModel)]="nuevoDocumentoRequerido.documentation_extra" required>
+  </div>
+  
+  <div class="items-form">
+    <input type="hidden" id="provider_id" name="provider_id" value={{providerId}} [(ngModel)]="nuevoDocumentoRequerido.provider_id" required>
+  </div>
+
+  <button class="btn" type="submit">Finalizar</button>
+</form>
+</div>
+
+<footer class="footer">
+  <p>
+      DOLLARCITY TRABAJA CON NAVEGADORES QUE POSEEN NIVELES DE SEGURIDAD EXIGIDOS PARA SER UTILIZADOS EN LA CONEXIÓN
+      CON EL SITIO WEB.
+      CON EL PROPÓSITO DE GARANTIZAR QUE UTILICES LAS VERSIONES COMPATIBLES, TE SUGERIMOS QUE ACTUALICES A LA ÚLTIMA
+      DISPONIBLE.
+
+      © 2023 <a href="http://https://dollarcity.com/">DOLLARCITY</a> DERECHOS RESERVADOS
+  </p>
+</footer>

@@ -1,0 +1,65 @@
+<header class="header">
+  <nav class="nav">
+    <div class="container-fluid">
+        <a href="/hero"><img src="https://dollarcity.com/img/resources/logo.png" alt="Logo Dollarcity"></a>
+    </div>
+    <ul class="menu">
+      <li class="items">
+          <a href="#">Inicio</a>
+      </li>
+      <li class="items">
+          <a href="#">Contacto</a>
+      </li>
+  </ul>
+</nav>
+</header>
+<div class="formulario">
+  <h1>Agregar Información de Cumplimiento Regulatorio</h1>
+  <hr class="separador">
+  <form (submit)="crearComplianceRegulatory()">
+  
+  <p> Proveniencia de los fondos</p>
+  
+    <div class="items-form">
+      <label for="member_pep">Confirmación de miembro PEP:</label>
+      <input type="text" id="member_pep" name="member_pep" [(ngModel)]="nuevoCompliance.member_pep" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="origin_funds">Origen de Fondos:</label>
+      <input type="text" id="origin_funds" name="origin_funds" [(ngModel)]="nuevoCompliance.origin_funds" required>
+    </div>
+  
+  <p> Persona conocida en razon social</p>
+  
+    <div class="items-form">
+      <label for="name_acquaintance">Nombre:</label>
+      <input type="text" id="name_acquaintance" name="name_acquaintance" [(ngModel)]="nuevoCompliance.name_acquaintance" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="positition_acquaintance">Cargo:</label>
+      <input type="text" id="positition_acquaintance" name="positition_acquaintance" [(ngModel)]="nuevoCompliance.positition_acquaintance" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="relation_acquaintance">Tipo de relacion:</label>
+      <input type="text" id="relation_acquaintance" name="relation_acquaintance" [(ngModel)]="nuevoCompliance.relation_acquaintance" required>
+    </div>
+    <div class="items-form">
+      <input type="hidden" id="provider_id" name="provider_id" value={{providerId}} [(ngModel)]="nuevoCompliance.provider_id" required>
+    </div>
+    <button class="btn" type="submit">Siguiente</button>
+  </form>
+</div>
+
+<footer class="footer">
+  <p>
+      DOLLARCITY TRABAJA CON NAVEGADORES QUE POSEEN NIVELES DE SEGURIDAD EXIGIDOS PARA SER UTILIZADOS EN LA CONEXIÓN
+      CON EL SITIO WEB.
+      CON EL PROPÓSITO DE GARANTIZAR QUE UTILICES LAS VERSIONES COMPATIBLES, TE SUGERIMOS QUE ACTUALICES A LA ÚLTIMA
+      DISPONIBLE.
+
+      © 2023 <a href="http://https://dollarcity.com/">DOLLARCITY</a> DERECHOS RESERVADOS
+  </p>
+</footer>

@@ -1,0 +1,168 @@
+<header class="header">
+  <nav class="nav">
+    <div class="container-fluid">
+        <a href="/hero"><img src="https://dollarcity.com/img/resources/logo.png" alt="Logo Dollarcity"></a>
+    </div>
+    <ul class="menu">
+      <li class="items">
+          <a href="#">Inicio</a>
+      </li>
+      <li class="items">
+          <a href="#">Contacto</a>
+      </li>
+  </ul>
+</nav>
+</header>
+
+<div class="formulario">
+<h1>Agregar Informacion Tributaria</h1>
+<hr class="separador">
+<div class="items-form">
+  <label for="country">Seleccione un país:</label>
+  <select id="country" [(ngModel)]="selectedCountry">
+    <option *ngFor="let country of countries" [ngValue]="country">{{ country.name }}</option>
+  </select>
+</div>
+
+<form (submit)="createInformationTributary()">
+  <div *ngIf="selectedCountry && selectedCountry.name === 'El Salvador'">
+    <div class="items-form">
+    <h2>{{selectedCountry.name}}</h2>
+    <label for="nit_ElSalvador">NIT:</label>
+    <input type="text" id="nit_ElSalvador" name="nit_ElSalvador" [(ngModel)]="newInformationTributary.nit_ElSalvador" required>
+  </div>
+
+  <div class="items-form">
+    <label for="iva_ElSalvador">IVA:</label>
+    <input type="text" id="iva_ElSalvador" name="iva_ElSalvador" [(ngModel)]="newInformationTributary.iva_ElSalvador" required>
+  </div>
+
+  <div class="items-form">
+    <label for="taxpayer_ElSalvador">Tipo de Contribuyente:</label>
+    <input type="text" id="taxpayer_ElSalvador" name="taxpayer_ElSalvador" [(ngModel)]="newInformationTributary.taxpayer_ElSalvador" required>
+  </div>
+
+  <div class="items-form">
+    <label for="activity_ElSalvador">Giro o Actividad Economica:</label>
+    <input type="text" id="activity_ElSalvador" name="activity_ElSalvador" [(ngModel)]="newInformationTributary.activity_ElSalvador" required>
+  </div>
+</div>
+
+
+<div *ngIf="selectedCountry && selectedCountry.name === 'Guatemala'">
+  <h2>{{selectedCountry.name}}</h2>
+  <div class="items-form">
+    <label for="rtu_guatemala">RTU:</label>
+    <input type="text" id="rtu_guatemala" name="rtu_guatemala" [(ngModel)]="newInformationTributary.rtu_guatemala" required>
+  </div>
+
+  <div class="items-form">
+    <label for="cui_guatemala">CUI:</label>
+    <input type="mail" id="cui_guatemala" name="cui_guatemala" [(ngModel)]="newInformationTributary.cui_guatemala" required>
+  </div>
+
+  <div class="items-form">
+    <label for="regime_guatemala">Regimen:</label>
+    <input type="text" id="regime_guatemala" name="regime_guatemala" [(ngModel)]="newInformationTributary.regime_guatemala" required>
+  </div>
+
+  <div class="items-form">
+    <label for="retention_guatemala">Retencion ISR:</label>
+    <input type="text" id="retention_guatemala" name="retention_guatemala" [(ngModel)]="newInformationTributary.cretention_guatemala" required>
+  </div>
+
+  <div class="items-form">
+    <label for="data_retention_guatemala">Datos para Retencion ISR:</label>
+    <input type="text" id="data_retention_guatemala" name="data_retention_guatemala" [(ngModel)]="newInformationTributary.data_retention_guatemala" required>
+  </div>
+
+  <div class="items-form">
+    <label for="tax_guatemala">Impuesto al valor agregado:</label>
+    <input type="text" id="tax_guatemala" name="tax_guatemala"  [(ngModel)]="newInformationTributary.tax_guatemala" required>
+  </div>
+</div>
+
+  
+<div *ngIf="selectedCountry && selectedCountry.name === 'Panama'">
+  <h2>{{selectedCountry.name}}</h2>
+<div class="items-form">
+    <label for="num_tax_panama">Numero de Identificacion de Impuestos:</label>
+    <input type="text" id="num_tax_panama" name="num_tax_panama" [(ngModel)]="newInformationTributary.num_tax_panama" required>
+  </div>
+</div>
+
+<div *ngIf="selectedCountry && selectedCountry.name === 'Peru'">
+  <h2>{{selectedCountry.name}}</h2>
+  <div class="items-form">
+    <label for="ruc_dni_peru">RUC/DNI:</label>
+    <input type="text" id="ruc_dni_peru" name="ruc_dni_peru"  [(ngModel)]="newInformationTributary.ruc_dni_peru" required>
+  </div>
+
+  <div class="items-form">
+    <label for="retention_peru">Agente de Retencion:</label>
+    <input type="text" id="retention_peru" name="retention_peru"  [(ngModel)]="newInformationTributary.retention_peru" required>
+  </div>
+
+  <div class="items-form">
+    <label for="subject_spot_peru">Proveedor sujeto al SPOT:</label>
+    <input type="text" id="subject_spot_peru" name="subject_spot_peru"  [(ngModel)]="newInformationTributary.subject_spot_peru" required>
+  </div>
+
+  <div class="items-form">
+    <label for="agent_perception_peru">Agente de Percepcion:</label>
+    <input type="text" id="agent_perception_peru" name="agent_perception_peru"  [(ngModel)]="newInformationTributary.agent_perception_peru" required>
+  </div>
+</div>
+
+<div *ngIf="selectedCountry && selectedCountry.name === 'Colombia'">
+  <h2>{{selectedCountry.name}}</h2>
+  <div class="items-form">
+    <label for="taxpayer_colombia">Tipo de Contribuyente:</label>
+    <input type="text" id="taxpayer_colombia" name="taxpayer_colombia"  [(ngModel)]="newInformationTributary.taxpayer_colombia" required>
+  </div>
+  
+  <div class="items-form">
+    <label for="autoretenedor_colombia">Autoretenedor:</label>
+    <input type="text" id="autoretenedor_colombia" name="autoretenedor_colombia"  [(ngModel)]="newInformationTributary.autoretenedor_colombia" required>
+  </div>
+
+  <div class="items-form">
+    <label for="retefuente_colombia">Relefuente:</label>
+    <input type="text" id="retefuente_colombia" name="retefuente_colombia"  [(ngModel)]="newInformationTributary.retefuente_colombia" required>
+  </div>
+
+  <div class="items-form">
+    <label for="rut_colombia">RUT:</label>
+    <input type="text" id="rut_colombia" name="rut_colombia"  [(ngModel)]="newInformationTributary.rut_colombia" required>
+  </div>
+
+  <div class="items-form">
+    <label for="ciiu_colombia">CIIU CODE:</label>
+    <input type="text" id="ciiu_colombia" name="ciiu_colombia" [(ngModel)]="newInformationTributary.ciiu_colombia" required>
+  </div>
+</div>
+    
+  <div class="items-form">
+    <input type="hidden" id="provider_id" name="provider_id" value={{providerId}} [(ngModel)]="newInformationTributary.provider_id" required>
+  </div>
+  <!-- Agrega más campos según tus necesidades -->
+
+  <button class="btn" type="submit">Siguiente</button>
+</form>
+
+<div *ngIf="formSend">
+  <a href="/provider/"{providerId}>Siguiente</a>
+</div>
+</div>
+
+
+<footer class="footer">
+  <p>
+      DOLLARCITY TRABAJA CON NAVEGADORES QUE POSEEN NIVELES DE SEGURIDAD EXIGIDOS PARA SER UTILIZADOS EN LA CONEXIÓN
+      CON EL SITIO WEB.
+      CON EL PROPÓSITO DE GARANTIZAR QUE UTILICES LAS VERSIONES COMPATIBLES, TE SUGERIMOS QUE ACTUALICES A LA ÚLTIMA
+      DISPONIBLE.
+
+      © 2023 <a href="http://https://dollarcity.com/">DOLLARCITY</a> DERECHOS RESERVADOS
+  </p>
+</footer>

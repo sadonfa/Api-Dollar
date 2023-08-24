@@ -1,0 +1,69 @@
+<header class="header">
+  <nav class="nav">
+      <div class="container-fluid">
+          <a href="/"><img src="https://dollarcity.com/img/resources/logo.png" alt="Logo Dollarcity"></a>
+      </div>
+      <ul class="menu">
+        <li class="items">
+            <a href="/">Inicio</a>
+        </li>
+        <li class="items">
+            <a href="#">Contacto</a>
+        </li>
+    </ul>
+  </nav>
+</header>
+
+<div class="formulario"> 
+<h1>Bienvenido proveedor</h1>
+<h3>Por favor ingresar sus datos en el siguiente formulario</h3>
+<hr class="separador">
+<form (submit)="createProvider()">
+  
+    <div class="items-form">
+      <label for="name_representative">Nombre de Representante:</label>
+      <input type="text" id="name_representative" name="name_representative" [(ngModel)]="newProvider.name_reason_social" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="document_identity">Documento Identidad N°:</label>
+      <input type="text" id="document_identity" name="document_identity" [(ngModel)]="newProvider.activity" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="address_office">Dirección Oficina:</label>
+      <input type="text" id="address_office" name="address_office" [(ngModel)]="newProvider.address" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="city">Ciudad:</label>
+      <input type="text" id="city" name="city" [(ngModel)]="newProvider.departament" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="phone_company">Teléfono Empresa</label>
+      <input type="text" id="phone_company" name="phone_company" [(ngModel)]="newProvider.services_products_offered" required>
+    </div>
+  
+    <div class="items-form">
+      <label for="mail_representative"> Correo electrónico</label>
+      <input type="mail" id="mail_representative" name="mail_representative" [(ngModel)]="newProvider.mail_warning_pay" required>
+    </div>
+  
+
+    <!-- Agrega más campos según tus necesidades -->
+  
+    <button class="btn" type="submit">Siguiente</button>
+  </form> 
+</div>
+
+<footer class="footer">
+  <p>
+      DOLLARCITY TRABAJA CON NAVEGADORES QUE POSEEN NIVELES DE SEGURIDAD EXIGIDOS PARA SER UTILIZADOS EN LA CONEXIÓN
+      CON EL SITIO WEB.
+      CON EL PROPÓSITO DE GARANTIZAR QUE UTILICES LAS VERSIONES COMPATIBLES, TE SUGERIMOS QUE ACTUALICES A LA ÚLTIMA
+      DISPONIBLE.
+
+      © 2023 <a href="http://https://dollarcity.com/">DOLLARCITY</a> DERECHOS RESERVADOS
+  </p>
+</footer>
